@@ -38,3 +38,4 @@ switch (userLanguage) {
     default:
         greeting = 'Hello! (default language)';
 }
+console.log(greeting);
