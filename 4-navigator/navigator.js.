@@ -1,0 +1,21 @@
+// Упрощённый навигатор: расчёт расстояния по прямой между
+// текущим местоположением и пунктом назначения.
+// Широта (latitude) соответствует оси Y, долгота (longitude) — оси X.
+
+// Входные данные — координаты текущего положения
+const positionLatitude = 10;
+const positionLongitude = 15;
+
+// Входные данные — координаты пункта назначения
+const addressLatitude = 25;
+const addressLongitude = 40;
+
+// Разница координат по осям X и Y образует катеты прямоугольного треугольника
+const deltaLatitude = addressLatitude - positionLatitude;   // разница по Y
+const deltaLongitude = addressLongitude - positionLongitude; // разница по X
+
+// Расстояние — это гипотенуза (диагональ), находим по теореме Пифагора:
+// distance = sqrt(deltaX^2 + deltaY^2)
+const distance = Math.sqrt(deltaLatitude ** 2 + deltaLongitude ** 2);
+
+console.log(`Расстояние до пункта назначения: ${distance}`);
