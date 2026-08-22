@@ -6,7 +6,7 @@ function convertCurrency(amount, fromCurrency, toCurrency) {
   };
 
   if (!rates.hasOwnProperty(fromCurrency) || !rates.hasOwnProperty(toCurrency)) {
-    return 0;
+    return null;
   }
 
   const amountInRub = amount * rates[fromCurrency];
